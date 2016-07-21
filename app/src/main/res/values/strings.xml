@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Call informer HW</string>
+    <string name="label_close">Close</string>
+    <string name="format_incoming_call">Incoming call: %s</string>
 </resources>

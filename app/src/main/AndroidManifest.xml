@@ -3,6 +3,7 @@
           package="ru.yandex.yamblz.euv.informer">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
     <application
         android:allowBackup="true"
@@ -23,6 +24,8 @@
                 <action android:name="android.intent.action.PHONE_STATE"/>
             </intent-filter>
         </receiver>
+
+        <service android:name=".InformerService"/>
 
     </application>
 
