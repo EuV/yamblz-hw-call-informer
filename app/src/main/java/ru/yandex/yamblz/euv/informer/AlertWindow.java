@@ -21,9 +21,8 @@ import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 import static android.graphics.PixelFormat.TRANSLUCENT;
 import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
-import static android.view.WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
-import static android.view.WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL;
-import static android.view.WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
+import static android.view.WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED;
+import static android.view.WindowManager.LayoutParams.TYPE_SYSTEM_ERROR;
 
 public class AlertWindow {
     final InformerService service;
@@ -60,8 +59,8 @@ public class AlertWindow {
         LayoutParams windowParams = new LayoutParams(
                 MATCH_PARENT,
                 WRAP_CONTENT,
-                TYPE_SYSTEM_ALERT,
-                FLAG_NOT_FOCUSABLE | FLAG_NOT_TOUCH_MODAL,
+                TYPE_SYSTEM_ERROR,
+                FLAG_SHOW_WHEN_LOCKED,
                 TRANSLUCENT
         );
         windowParams.gravity = Gravity.CENTER;
